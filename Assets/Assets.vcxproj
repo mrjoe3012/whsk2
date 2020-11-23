@@ -70,16 +70,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)include\Maths\;$(ProjectDir)include\whsk2\;$(ProjectDir)include\Utils\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)..\Maths\;$(ProjectDir)..\whsk2\;$(ProjectDir)..\Utils\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(ProjectDir)include\Maths\;$(ProjectDir)include\whsk2\;$(ProjectDir)include\Utils\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)..\Maths\;$(ProjectDir)..\whsk2\;$(ProjectDir)..\Utils\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)include\Maths\;$(ProjectDir)include\whsk2\;$(ProjectDir)include\Utils\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)..\Maths\;$(ProjectDir)..\whsk2\;$(ProjectDir)..\Utils\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir)include\Maths\;$(ProjectDir)include\whsk2\;$(ProjectDir)include\Utils\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)..\Maths\;$(ProjectDir)..\whsk2\;$(ProjectDir)..\Utils\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

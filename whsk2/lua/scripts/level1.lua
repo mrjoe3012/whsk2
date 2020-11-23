@@ -7,7 +7,6 @@ function OnLoad()
 	rend:SetSprite("sprite.jpg")
 	rend.colour = Colour.blue
 	rend:SetSprite("sprite.jpg")
-	rend:SetSprite(nil)
 end
 
 function Update()

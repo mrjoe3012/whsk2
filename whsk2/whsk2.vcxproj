@@ -143,20 +143,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)include\lua\;$(ProjectDir)include\Physics\;$(ProjectDir)include\Maths\;$(ProjectDir)include\Utils\;$(ProjectDir)include\Assets\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)include\lua\;$(ProjectDir)..\Physics\;$(ProjectDir)..\Maths\;$(ProjectDir)..\Utils\;$(ProjectDir)..\Assets\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Lib\;$(ProjectDir)..\Debug\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(ProjectDir)include\lua\;$(ProjectDir)include\Physics\;$(ProjectDir)include\Maths\;$(ProjectDir)include\Utils\;$(ProjectDir)include\Assets\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)include\lua\;$(ProjectDir)..\Physics\;$(ProjectDir)..\Maths\;$(ProjectDir)..\Utils\;$(ProjectDir)..\Assets\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Lib\;$(ProjectDir)..\Debug\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)include\lua\;$(ProjectDir)include\Physics\;$(ProjectDir)include\Maths\;$(ProjectDir)include\Utils\;$(ProjectDir)include\Assets\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)include\lua\;$(ProjectDir)..\Physics\;$(ProjectDir)..\Maths\;$(ProjectDir)..\Utils\;$(ProjectDir)..\Assets\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Lib\;$(ProjectDir)..\Debug\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir)include\lua\;$(ProjectDir)include\Physics\;$(ProjectDir)include\Maths\;$(ProjectDir)include\Utils\;$(ProjectDir)include\Assets\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)include\lua\;$(ProjectDir)..\Physics\;$(ProjectDir)..\Maths\;$(ProjectDir)..\Utils\;$(ProjectDir)..\Assets\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Lib\;$(ProjectDir)..\Debug\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

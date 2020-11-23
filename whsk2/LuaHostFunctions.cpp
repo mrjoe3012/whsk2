@@ -869,24 +869,42 @@ int LuaHostFunctions::l_SpriteRendererSetSprite(lua_State* L)
 
 	lua_settop(L, 2);
 
-	std::string path = luaL_checkstring(L, -1);
+	if (!lua_isnil(L, -1))
+	{
+		std::string path = luaL_checkstring(L, -1);
 
-	lua_pop(L, 1);
+		lua_pop(L, 1);
 
-	luaL_checktype(L, -1, LUA_TTABLE);
+		luaL_checktype(L, -1, LUA_TTABLE);
 
-	lua_getfield(L, -1, "_handle");
+		lua_getfield(L, -1, "_handle");
 
-	SpriteRenderer* rend = (SpriteRenderer*)luaL_checkinteger(L, -1);
+		SpriteRenderer* rend = (SpriteRenderer*)luaL_checkinteger(L, -1);
 
-	using convert_type = std::codecvt_utf8<wchar_t>;
-	std::wstring_convert<convert_type, wchar_t> converter;
+		using convert_type = std::codecvt_utf8<wchar_t>;
+		std::wstring_convert<convert_type, wchar_t> converter;
 
-	std::wstring converted = converter.from_bytes(path);
+		std::wstring converted = converter.from_bytes(path);
+		Sprite* s;
+		try
+		{
+			s = Sprite::LoadSprite(converted);
+		}
+		catch (...)
+		{
+			throw std::runtime_error(std::string("Couldn't find the file ") + path);
+		}
+		rend->SetSprite(s);
+	}
+	else
+	{
+		lua_pop(L, 1);
+		lua_getfield(L, -1, "_handle");
+		SpriteRenderer* rend = (SpriteRenderer*)luaL_checkinteger(L, -1);
 
-	Sprite* s = Sprite::LoadSprite(converted);
+		rend->SetSprite(nullptr);
 
-	rend->SetSprite(s);
+	}
 
 	return 0;
 

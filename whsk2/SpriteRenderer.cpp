@@ -41,7 +41,8 @@ void SpriteRenderer::SetSprite(Sprite* sprite)
 		}
 
 		this->sprite = sprite;
-		sprite->references++;
+		if(this->sprite)
+			sprite->references++;
 	}
 }
 
